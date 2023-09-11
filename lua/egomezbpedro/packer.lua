@@ -73,6 +73,17 @@ return require('packer').startup(function(use)
   use("github/copilot.vim")
   use("eandrju/cellular-automaton.nvim")
   use("laytan/cloak.nvim")
+  use('ThePrimeagen/vim-be-good')
+  use('christoomey/vim-tmux-navigator')
+  use {
+      'nvim-lualine/lualine.nvim',
+      requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+  }
+  use {'github/copilot.vim'}
+  use {'nvim-orgmode/orgmode', config = function()
+        require('orgmode').setup{}
+        end
+    }
 
 end)
 
