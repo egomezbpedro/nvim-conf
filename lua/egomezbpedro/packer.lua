@@ -5,50 +5,50 @@ vim.cmd.packadd('packer.nvim')
 
 return require('packer').startup(function(use)
   -- Packer can manage itself
-  use 'wbthomason/packer.nvim'
+  use "wbthomason/packer.nvim"
+  use "nvim-treesitter/playground"
+  use "theprimeagen/harpoon"
+  use "theprimeagen/refactoring.nvim"
+  use "mbbill/undotree"
+  use "tpope/vim-fugitive"
+  use "nvim-treesitter/nvim-treesitter-context"
+  use "folke/zen-mode.nvim"
+  use "eandrju/cellular-automaton.nvim"
+  use "laytan/cloak.nvim"
+  use "ThePrimeagen/vim-be-good"
+  use "christoomey/vim-tmux-navigator"
+  use 'github/copilot.vim'
+  use 'nvim-tree/nvim-web-devicons'
+  use 'nvim-orgmode/orgmode'
+  use 'akinsho/org-bullets.nvim'
 
   use {
-	  'nvim-telescope/telescope.nvim', tag = '0.1.0',
+      'folke/trouble.nvim',
+      dependencies = { "nvim-tree/nvim-web-devicons" }
+  }
+
+  use {
+	  'nvim-telescope/telescope.nvim', tag = '0.1.x',
 	  -- or                            , branch = '0.1.x',
 	  requires = { {'nvim-lua/plenary.nvim'} }
   }
 
   use({
-	  'rose-pine/neovim',
-	  as = 'rose-pine',
-	  config = function()
-		  vim.cmd('colorscheme rose-pine')
-	  end
-  })
-
-  use({
-      "folke/trouble.nvim",
-      config = function()
-          require("trouble").setup {
-              icons = false,
-              -- your configuration comes here
-              -- or leave it empty to use the default settings
-              -- refer to the configuration section below
-          }
-      end
+	  'navarasu/onedark.nvim',
+	  as = 'onedark',
   })
 
   use {
-			'nvim-treesitter/nvim-treesitter',
-			run = function()
-				local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
-				ts_update()
-			end,}
-  use("nvim-treesitter/playground")
-  use("theprimeagen/harpoon")
-  use("theprimeagen/refactoring.nvim")
-  use("mbbill/undotree")
-  use("tpope/vim-fugitive")
-  use("nvim-treesitter/nvim-treesitter-context");
+      'nvim-treesitter/nvim-treesitter',
+      run = function()
+          local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
+          ts_update()
+      end,
+  }
 
   use {
 	  'VonHeikemen/lsp-zero.nvim',
-	  branch = 'v1.x',
+      branch = 'v3.x',
 	  requires = {
 		  -- LSP Support
 		  {'neovim/nvim-lspconfig'},
@@ -69,21 +69,10 @@ return require('packer').startup(function(use)
 	  }
   }
 
-  use("folke/zen-mode.nvim")
-  use("github/copilot.vim")
-  use("eandrju/cellular-automaton.nvim")
-  use("laytan/cloak.nvim")
-  use('ThePrimeagen/vim-be-good')
-  use('christoomey/vim-tmux-navigator')
   use {
       'nvim-lualine/lualine.nvim',
       requires = { 'nvim-tree/nvim-web-devicons', opt = true }
   }
-  use {'github/copilot.vim'}
-  use {'nvim-orgmode/orgmode', config = function()
-        require('orgmode').setup{}
-        end
-    }
 
 end)
 
