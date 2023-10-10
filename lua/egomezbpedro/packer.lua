@@ -21,6 +21,11 @@ return require('packer').startup(function(use)
   use 'nvim-tree/nvim-web-devicons'
   use 'nvim-orgmode/orgmode'
   use 'akinsho/org-bullets.nvim'
+  use({ 'rose-pine/neovim', as = 'rose-pine' })
+  use 'ThePrimeagen/git-worktree.nvim'
+  use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' }
+
+  use "nvim-lua/popup.nvim"
 
   use {
       'folke/trouble.nvim',
@@ -30,7 +35,7 @@ return require('packer').startup(function(use)
   use {
 	  'nvim-telescope/telescope.nvim', tag = '0.1.x',
 	  -- or                            , branch = '0.1.x',
-	  requires = { {'nvim-lua/plenary.nvim'} }
+	  requires = { {'nvim-lua/plenary.nvim', 'git_worktree'} }
   }
 
   use({

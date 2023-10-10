@@ -6,3 +6,6 @@ vim.keymap.set('n', '<leader>ps', function()
 end)
 vim.keymap.set('n', '<leader>vh', builtin.help_tags, {})
 
+vim.keymap.set("n", "<leader>gw", "<cmd>:lua require('telescope').extensions.git_worktree.git_worktrees()<CR>")
+vim.keymap.set("n", "<leader>gwc", "<cmd>:lua require('telescope').extensions.git_worktree.create_git_worktree()<CR>")
+
