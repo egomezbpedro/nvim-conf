@@ -11,6 +11,8 @@ return require('packer').startup(function(use)
   use "theprimeagen/refactoring.nvim"
   use "mbbill/undotree"
   use "tpope/vim-fugitive"
+  use "tpope/vim-surround"
+  use "tpope/vim-commentary"
   use "nvim-treesitter/nvim-treesitter-context"
   use "folke/zen-mode.nvim"
   use "eandrju/cellular-automaton.nvim"
@@ -22,12 +24,28 @@ return require('packer').startup(function(use)
   use 'nvim-orgmode/orgmode'
   use 'akinsho/org-bullets.nvim'
   use({ 'rose-pine/neovim', as = 'rose-pine' })
-  use 'ThePrimeagen/git-worktree.nvim'
+  use "theprimeagen/git-worktree.nvim"
   use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' }
+  use 'jghauser/mkdir.nvim'
+
+  use {
+   "m4xshen/hardtime.nvim",
+   dependencies = { "MunifTanjim/nui.nvim", "nvim-lua/plenary.nvim" },
+  }
+  use {
+  'sudormrfbin/cheatsheet.nvim',
+
+  requires = {
+      {'nvim-telescope/telescope.nvim'},
+      {'nvim-lua/popup.nvim'},
+      {'nvim-lua/plenary.nvim'},
+  } }
+  use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
 
   use "nvim-lua/popup.nvim"
 
   use {
+
       'folke/trouble.nvim',
       dependencies = { "nvim-tree/nvim-web-devicons" }
   }
@@ -35,7 +53,7 @@ return require('packer').startup(function(use)
   use {
 	  'nvim-telescope/telescope.nvim', tag = '0.1.x',
 	  -- or                            , branch = '0.1.x',
-	  requires = { {'nvim-lua/plenary.nvim', 'git_worktree'} }
+      requires = { {'nvim-lua/plenary.nvim'}}
   }
 
   use({
