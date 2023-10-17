@@ -1,5 +1,3 @@
--- Load custom treesitter grammar for org filetype
-require('orgmode').setup_ts_grammar()
 
 -- Treesitter configuration
 require('nvim-treesitter.configs').setup {
@@ -14,12 +12,17 @@ require('nvim-treesitter.configs').setup {
   ensure_installed = {'org'}, -- Or run :TSUpdate org
 }
 
+-- Load custom treesitter grammar for org filetype
+require('orgmode').setup_ts_grammar()
+
 require('orgmode').setup({
 
-  org_agenda_files = {'~/org/*.org', '~/.code/wiki/*.org'},
-  org_default_notes_file = '~/org/notes.org',
+  org_agenda_files = {'~/org/*.org', '~/.code/wiki/*.org', '~/Personal/*/*/*.org', '~/Work/*/agenda.org'},
+  org_default_notes_file = '~/org/refile.org',
 
-  org_todo_keywords = {'Backlog', 'InProgress', 'Waiting', '|', 'Done', 'Cancelled'},
+  org_todo_keywords = {'Backlog(b)', 'InProgress(p)', 'Waiting(w)', '|', 'Done(d)', 'Cancelled(c)'},
+
+  org_hide_leading_stars = true,
 
   org_todo_keyword_faces = {
       Backlog = ':foreground #98abaa :weight bold',
@@ -28,6 +31,7 @@ require('orgmode').setup({
       Done = ':foreground #79d87e :weight bold',
       Cancelled = ':foreground #545754 :weight bold',
   },
+
   org_capture_templates = {
       t = {
           description = 'Todo',
@@ -44,5 +48,11 @@ require('orgmode').setup({
           template = '\n*** %<%Y-%m-%d> %<%A>\n**** %U\n\n%?',
           target = '~/org/journal/%<%Y-%m>.org'
       },
-  }
+  },
+
+  mappings = {
+      org = {
+          org_toggle_checkbox = '<leader>ct',
+      }
+  },
 })

@@ -58,3 +58,9 @@ vim.keymap.set("n", "<leader>mr", "<cmd>CellularAutomaton make_it_rain<CR>");
 vim.keymap.set("n", "<leader><leader>", function()
     vim.cmd("so")
 end)
+
+vim.keymap.set("n", "<leader>gb", "<cmd>silent !go build .<CR>")
+vim.keymap.set("n", "<leader>ms", "<cmd>print('%s/\\//g')<CR>")
+
+vim.keymap.set("n", "<leader>-", ":vertical resize -20<CR>")
+vim.keymap.set("n", "<leader>+", ":vertical resize +20<CR>")
