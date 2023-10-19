@@ -17,7 +17,7 @@ require('orgmode').setup_ts_grammar()
 
 require('orgmode').setup({
 
-  org_agenda_files = {'~/org/*.org', '~/.code/wiki/*.org', '~/Personal/*/*/*.org', '~/Work/*/agenda.org'},
+  org_agenda_files = {'~/org/*.org', '~/.code/wiki/*.org', '~/personal/*/*/*.org', '~/work/*/agenda.org'},
   org_default_notes_file = '~/org/refile.org',
 
   org_todo_keywords = {'Backlog(b)', 'InProgress(p)', 'Waiting(w)', '|', 'Done(d)', 'Cancelled(c)'},

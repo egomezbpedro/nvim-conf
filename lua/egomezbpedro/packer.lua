@@ -22,7 +22,7 @@ return require('packer').startup(function(use)
     use 'github/copilot.vim'
     use 'nvim-tree/nvim-web-devicons'
     use 'nvim-orgmode/orgmode'
-    use 'akinsho/org-bullets.nvim'
+    -- use 'akinsho/org-bullets.nvim'
     use({ 'rose-pine/neovim', as = 'rose-pine' })
     use "theprimeagen/git-worktree.nvim"
     use { 'nvim-telescope/telescope-fzf-native.nvim', run =
@@ -31,10 +31,10 @@ return require('packer').startup(function(use)
     use 'windwp/nvim-autopairs'
     use ({ "mrjones2014/tldr.nvim", requires = {'nvim-telescope/telescope.nvim'}})
 
-    use {
-        "m4xshen/hardtime.nvim",
-        dependencies = { "MunifTanjim/nui.nvim", "nvim-lua/plenary.nvim" },
-    }
+    -- use {
+    --     "m4xshen/hardtime.nvim",
+    --     dependencies = { "MunifTanjim/nui.nvim", "nvim-lua/plenary.nvim" },
+    -- }
 
     use {
         'sudormrfbin/cheatsheet.nvim',

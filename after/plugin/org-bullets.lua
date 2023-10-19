@@ -1,1 +1,1 @@
-require('org-bullets').setup()
+-- require('org-bullets').setup()
