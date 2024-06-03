@@ -30,41 +30,25 @@ return require('packer').startup(function(use)
     use 'jghauser/mkdir.nvim'
     use 'windwp/nvim-autopairs'
     use ({ "mrjones2014/tldr.nvim", requires = {'nvim-telescope/telescope.nvim'}})
-
-    -- use {
-    --     "m4xshen/hardtime.nvim",
-    --     dependencies = { "MunifTanjim/nui.nvim", "nvim-lua/plenary.nvim" },
-    -- }
-
-    use {
-        'sudormrfbin/cheatsheet.nvim',
-
-        requires = {
-            { 'nvim-telescope/telescope.nvim' },
-            { 'nvim-lua/popup.nvim' },
-            { 'nvim-lua/plenary.nvim' },
-        } }
+    use 'wakatime/vim-wakatime'
 
     use({
         "iamcco/markdown-preview.nvim",
-        run = "cd app && npm install",
-        setup = function() vim.g.mkdp_filetypes = { "markdown" } end,
-        ft = { "markdown" },
+        run = function() vim.fn["mkdp#util#install"]() end,
     })
+
+
+    use {'sudormrfbin/cheatsheet.nvim',requires = {{ 'nvim-telescope/telescope.nvim' },{ 'nvim-lua/popup.nvim' },{ 'nvim-lua/plenary.nvim' },} }
 
     use 'tpope/vim-markdown'
     use "nvim-lua/popup.nvim"
 
-    use {
-
-        'folke/trouble.nvim',
-        dependencies = { "nvim-tree/nvim-web-devicons" }
-    }
+    use {'folke/trouble.nvim', dependencies = { "nvim-tree/nvim-web-devicons" }}
 
     use {
-        'nvim-telescope/telescope.nvim', tag = '0.1.x',
+        'nvim-telescope/telescope.nvim', tag = '0.1.5',
         -- or                            , branch = '0.1.x',
-        requires = { { 'nvim-lua/plenary.nvim' } }
+        requires = { {'nvim-lua/plenary.nvim'} }
     }
 
     use({
