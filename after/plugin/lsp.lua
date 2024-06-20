@@ -8,6 +8,7 @@ require('mason-lspconfig').setup({
         'tsserver',
         'lua_ls',
         'gopls',
+        'terraformls',
     },
     handlers = {
         lsp.default_setup,
