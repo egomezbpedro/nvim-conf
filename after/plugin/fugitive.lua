@@ -1,4 +1,4 @@
-vim.keymap.set("n", "<leader>gs", vim.cmd.Git)
+vim.keymap.set("n", "<leader>gg", vim.cmd.Git)
 
 local egomezbpedro_Fugitive = vim.api.nvim_create_augroup("egomezbpedro_Fugitive", {})
 
