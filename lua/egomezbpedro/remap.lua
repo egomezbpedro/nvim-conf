@@ -64,3 +64,5 @@ vim.keymap.set("n", "<leader>ms", "<cmd>print('%s/\\//g')<CR>")
 
 vim.keymap.set("n", "<leader>-", ":vertical resize -20<CR>")
 vim.keymap.set("n", "<leader>+", ":vertical resize +20<CR>")
+
+vim.keymap.set("n", "<leader>bk", ":bd<CR>")
