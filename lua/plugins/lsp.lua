@@ -30,6 +30,7 @@ return {
                 'tsserver',
                 'lua_ls',
                 'gopls',
+                'pylsp'
             },
             handlers = {
                 lsp.default_setup,
