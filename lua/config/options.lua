@@ -1,3 +1,8 @@
+-- Options are automatically loaded before lazy.nvim startup
+-- Default options that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/options.lua
+-- Add any additional options here
+vim.g.timeoutln = 30
+
 vim.opt.syntax = "on"
 vim.opt.filetype.plugin = "on"
 
@@ -31,10 +36,6 @@ vim.opt.updatetime = 50
 vim.opt.colorcolumn = "80"
 vim.opt.guifont = { "Hack Nerd Font", "h14" }
 
--- Make line numbers default
-vim.opt.nu = true
-vim.opt.relativenumber = true
-
 -- Enable break indent
 vim.o.breakindent = true
 
@@ -43,11 +44,11 @@ vim.o.ignorecase = true
 vim.o.smartcase = true
 
 --vim.cmd()
-vim.opt.clipboard = 'unnamedplus'
+vim.opt.clipboard = "unnamedplus"
 
 -- Set completeopt to have a better completion experience
-vim.o.completeopt = 'menuone,noselect'
+vim.o.completeopt = "menuone,noselect"
 
 -- Concealer for Neorg
-vim.o.conceallevel=2
-vim.opt.concealcursor = 'nc'
+vim.o.conceallevel = 2
+vim.opt.concealcursor = "nc"
