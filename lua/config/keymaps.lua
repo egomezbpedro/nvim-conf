@@ -10,7 +10,7 @@ vim.keymap.set("n", "<C-j>", "<Cmd>NvimTmuxNavigateDown<CR>", { silent = true })
 vim.keymap.set("n", "<C-k>", "<Cmd>NvimTmuxNavigateUp<CR>", { silent = true })
 vim.keymap.set("n", "<C-l>", "<Cmd>NvimTmuxNavigateRight<CR>", { silent = true })
 
-vim.keymap.set("n", "<leader>fs", ":w<CR>")
+vim.keymap.set("n", "<leader>ww", ":w<CR>")
 
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
@@ -40,10 +40,9 @@ vim.keymap.set("i", "jj", "<Esc>")
 vim.keymap.set("i", "<C-c>", "<Esc>")
 
 vim.keymap.set("n", "Q", "<nop>")
-vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer & while [ : ]; do sleep 1; done<CR>")
 
-vim.keymap.set("n", "<leader>cr", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
-vim.keymap.set("n", "<leader>cx", "<cmd>!chmod +x %<CR>", { silent = true })
+vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
 vim.keymap.set("n", "J", "mzJ`z")
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
@@ -59,7 +58,6 @@ vim.keymap.set("n", "<leader>J", "<cmd>lprev<CR>zz")
 vim.keymap.set("n", "<leader>ms", "<cmd>print('%s/\\//g')<CR>")
 
 vim.keymap.set("n", "<leader>-", ":vertical resize -20<CR>")
-vim.keymap.set("n", "<leader>+", ":vertical resize +20<CR>")
 
 -- Docker Compose
 vim.keymap.set(
