@@ -25,7 +25,7 @@ return {
             local builtin = require('telescope.builtin')
 
             map("n", "<leader>pf", builtin.find_files, "[P]roject [F]iles")
-            map("n", "<leader>gf", builtin.git_files, "[G]it [F]iles")
+            map("n", "<leader>ff", builtin.git_files, "[G]it [F]iles")
             map("n", "<leader>lg", builtin.live_grep, "[L]ive [G]rep")
             map("n", "<leader>gs", builtin.grep_string, "[G]rep [S]tring")
             map("n", "<leader>b", builtin.buffers, "[B]uffers")

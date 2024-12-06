@@ -47,7 +47,3 @@ vim.opt.clipboard = 'unnamedplus'
 
 -- Set completeopt to have a better completion experience
 vim.o.completeopt = 'menuone,noselect'
-
--- Concealer for Neorg
-vim.o.conceallevel=2
-vim.opt.concealcursor = 'nc'
