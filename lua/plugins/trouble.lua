@@ -10,7 +10,7 @@ return {
                 desc = "Diagnostics (Trouble)",
             },
             {
-                "<leader>xX",
+                "<leader>xb",
                 "<cmd>Trouble diagnostics toggle filter.buf=0<cr>",
                 desc = "Buffer Diagnostics (Trouble)",
             },
@@ -25,7 +25,7 @@ return {
                 desc = "LSP Definitions / references / ... (Trouble)",
             },
             {
-                "<leader>xL",
+                "<leader>xL ",
                 "<cmd>Trouble loclist toggle<cr>",
                 desc = "Location List (Trouble)",
             },

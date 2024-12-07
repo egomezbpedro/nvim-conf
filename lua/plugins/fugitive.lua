@@ -9,7 +9,7 @@ return {
 		config = function ()
 			local map = require("helpers.keys").map
 
-            map("n", "<leader>gg", "<cmd>Git<cr>", "Git Status")
+            map("n", "<leader>g", "<cmd>:vertical Git<cr>", "Git Status")
 			map("n", "<leader>ga", "<cmd>Git add %<cr>", "Stage the current file")
 			map("n", "<leader>gb", "<cmd>Git blame<cr>", "Show the blame")
 

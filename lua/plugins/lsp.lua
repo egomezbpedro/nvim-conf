@@ -1,4 +1,3 @@
---k
 -- LSP Configuration & Plugins
 return {
     'VonHeikemen/lsp-zero.nvim',
@@ -30,7 +29,6 @@ return {
                 'tsserver',
                 'lua_ls',
                 'gopls',
-                'pylsp'
             },
             handlers = {
                 lsp.default_setup,
