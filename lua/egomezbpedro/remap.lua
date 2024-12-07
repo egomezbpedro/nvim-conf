@@ -66,7 +66,7 @@ vim.keymap.set("n", "<leader>vpp", "<cmd>e ~/.config/nvim/lua/egomezbpedro/packe
 vim.keymap.set("n", "<leader>mr", "<cmd>CellularAutomaton make_it_rain<CR>");
 
 vim.keymap.set("n", "<leader><leader>", function()
-    vim.cmd("so")
+    vim.cmd("so %")
 end)
 
 vim.keymap.set("n", "<leader>gb", "<cmd>silent !go build .<CR>")
@@ -74,5 +74,6 @@ vim.keymap.set("n", "<leader>ms", "<cmd>print('%s/\\//g')<CR>")
 
 vim.keymap.set("n", "<leader>-", ":vertical resize -20<CR>")
 vim.keymap.set("n", "<leader>+", ":vertical resize +20<CR>")
+vim.keymap.set("n", "<leader>0", ":vertical resize 40<CR>")
 
 vim.keymap.set("n", "<leader>bk", ":bd<CR>")
