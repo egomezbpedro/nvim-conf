@@ -58,6 +58,7 @@ vim.keymap.set("n", "<leader>J", "<cmd>lprev<CR>zz")
 vim.keymap.set("n", "<leader>ms", "<cmd>print('%s/\\//g')<CR>")
 
 vim.keymap.set("n", "<leader>-", ":vertical resize -20<CR>")
+vim.keymap.set("n", "<leader>8", ":vertical resize 100<CR>")
 
 -- Docker Compose
 vim.keymap.set(
