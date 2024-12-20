@@ -1,49 +1,49 @@
+-- Basic syntax highlight
 vim.opt.syntax = "on"
 vim.opt.filetype.plugin = "on"
+vim.opt.termguicolors = true
 
-vim.opt.guicursor = ""
+-- Mouse mode
+-- `:help mouse`
+vim.opt.mouse = 'a'
 
-vim.opt.tabstop = 4
-vim.opt.softtabstop = 4
-vim.opt.shiftwidth = 4
-vim.opt.expandtab = true
+-- NVIM Mode
+vim.opt.showmode = false
 
-vim.opt.smartindent = true
+-- Sync clipboard between OS and Neovim.
+--  Schedule the setting after `UiEnter` because it can increase startup-time.
+--  Remove this option if you want your OS clipboard to remain independent.
+--  See `:help 'clipboard'`
+vim.schedule(function()
+  vim.opt.clipboard = 'unnamedplus'
+end)
 
-vim.opt.wrap = false
+-- Decrease update time
+vim.opt.updatetime = 50
+-- Decrease mapped sequence wait time
+-- Displays which-key popup sooner
+vim.opt.timeoutlen = 400
 
+-- Configure how new splits should be opened
+vim.opt.splitright = false
+vim.opt.splitbelow = true
+
+-- Preview substitutions live, as you type!
+vim.opt.inccommand = 'split'
+
+-- Set completeopt to have a better completion experience
+vim.opt.completeopt = 'menuone,noselect,noinsert,fuzzy,preview'
+
+vim.opt.hlsearch = false
+vim.opt.incsearch = true
+
+-- Case-insensitive searching UNLESS \C or one or more capital letters in the search term
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
+
+-- Save undo history
 vim.opt.swapfile = false
 vim.opt.backup = false
 vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
 vim.opt.undofile = true
 
-vim.opt.hlsearch = false
-vim.opt.incsearch = true
-
-vim.opt.termguicolors = true
-
-vim.opt.scrolloff = 16
-vim.opt.signcolumn = "yes"
-vim.opt.isfname:append("@-@")
-
-vim.opt.updatetime = 50
-
-vim.opt.colorcolumn = "80"
-vim.opt.guifont = { "Hack Nerd Font", "h14" }
-
--- Make line numbers default
-vim.opt.nu = true
-vim.opt.relativenumber = true
-
--- Enable break indent
-vim.o.breakindent = true
-
--- Case insensitive searching UNLESS /C or capital in search
-vim.o.ignorecase = true
-vim.o.smartcase = true
-
---vim.cmd()
-vim.opt.clipboard = 'unnamedplus'
-
--- Set completeopt to have a better completion experience
-vim.o.completeopt = 'menuone,noselect'
