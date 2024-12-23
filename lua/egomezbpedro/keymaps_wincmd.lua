@@ -4,10 +4,10 @@ local keymap = vim.keymap.set
 --  Use CTRL+<hjkl> to switch between windows
 --
 --  See `:help wincmd` for a list of all window commands
-keymap('n', '<space>h', '<C-w>h', { silent = true }, { desc = 'Move focus to the left window' })
-keymap('n', '<space>l', '<C-w>l', { silent = true }, { desc = 'Move focus to the right window' })
-keymap('n', '<space>j', '<C-w>j', { silent = true }, { desc = 'Move focus to the lower window' })
-keymap('n', '<space>k', '<C-w>k', { silent = true }, { desc = 'Move focus to the upper window' })
+-- keymap('n', '<space>l', '<C-w>l', { silent = true }, { desc = 'Move focus to the right window' })
+-- keymap('n', '<space>h', '<C-w>h', { silent = true }, { desc = 'Move focus to the left window' })
+-- keymap('n', '<space>j', '<C-w>j', { silent = true }, { desc = 'Move focus to the lower window' })
+-- keymap('n', '<space>k', '<C-w>k', { silent = true }, { desc = 'Move focus to the upper window' })
 
 keymap('n', '<space>wc', '<C-w>c', { desc = 'Move focus to the upper window' })
 

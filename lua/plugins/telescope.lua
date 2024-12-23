@@ -48,7 +48,7 @@ return {
         vim.keymap.set("n", "<leader>vh", builtin.help_tags, { desc = "[V]iew [H]elp Tags" })
 
         -- Files search
-        vim.keymap.set("n", "<space>ll", builtin.find_files, { desc = "[P]roject [F]iles" })
+        vim.keymap.set("n", "<space><space>", builtin.find_files, { desc = "[P]roject [F]iles" })
         vim.keymap.set("n", "<leader>lg", builtin.live_grep, { desc = "[L]ive [G]rep" })
 
         -- Buffer
