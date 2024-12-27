@@ -17,7 +17,7 @@ vim.opt.number = true
 vim.opt.relativenumber = true
 
 -- Keep signcolumn on by default
-vim.opt.signcolumn = 'yes'
+vim.opt.signcolumn = 'yes:1'
 
 -- Editor Spaces vs Tabs
 -- Sets how neovim will display certain whitespace characters in the editor.
@@ -29,3 +29,5 @@ vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
+vim.opt.conceallevel = 2
+vim.opt.concealcursor = 'nc'
