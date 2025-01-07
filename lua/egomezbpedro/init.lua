@@ -1,4 +1,5 @@
 require("egomezbpedro/set")
+require("egomezbpedro/fterm")
 require("egomezbpedro/set_editor")
 require("egomezbpedro/keymaps_editor")
 require("egomezbpedro/keymaps_wincmd")
